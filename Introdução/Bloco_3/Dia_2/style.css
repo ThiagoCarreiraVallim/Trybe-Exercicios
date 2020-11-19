@@ -1,0 +1,41 @@
+
+        body{
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 65px;
+            color: orange;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        p {
+            font-weight: 600;
+            font-size: 3em;
+            text-decoration: transparent;
+        }
+
+        ul {
+            background-color: palegoldenrod;
+        }
+        .text {
+            background-color: rgb(209, 158, 175);
+            font-style: oblique;
+        }
+
+        #tabela {
+            line-height: 40px;
+            font-size: 25px;
+        }
+
+        #amarelo {
+            color: yellow;
+        }
+
+        #vermelho {
+            color: red;
+        }
+
+        #marron {
+            color: brown;
+        }
