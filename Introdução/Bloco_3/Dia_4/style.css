@@ -41,7 +41,7 @@ li.but:hover {
     transform: scale(1.5, 1.5);
 }
 
-a:hover {
+a.nav-but:hover {
     color: white;
 }
 
