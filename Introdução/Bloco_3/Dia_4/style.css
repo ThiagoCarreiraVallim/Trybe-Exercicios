@@ -58,8 +58,30 @@ a:hover {
 
 .link {
     float: right;
-    margin: 6.5% 4%;
+    margin: 6.5% 0%;
     background-color: red;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#title-aside {
+    margin: 15% 0%;
+    font-size: 20px;
+    font-family: monospace;
+    color: black;
+}
+
+#video {
+    background-color: rgb(255, 111, 111);
+    padding: 3%;
+    transition: 0.9s;
+}
+
+#video:hover {
+    background-color: rgb(94, 26, 26);
+    transform: scale(1.5, 1.5);
 }
 
 h2 {
