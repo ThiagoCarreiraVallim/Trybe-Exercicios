@@ -1,3 +1,61 @@
+*{
+    margin: 0px;
+}
+
 body {
     background-color: white;
+}
+
+header {
+    margin: 0px;
+}
+
+#title {
+    background-color: red;
+    font-family: monospace;
+    font-size: 25px;
+    margin: 0px;
+    padding: 1.5%;
+    text-align: center;
+}
+
+#nav {
+    background-color: blue;
+    text-align: center;
+}
+
+#nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+#main {
+    max-width: 60%;
+    margin: 3% 10%;
+    padding: 1%;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 10px;
+    font-family: serif;
+    color: green;
+}
+
+article {
+    padding: 3%;
+    font-size: 18px;
+}
+
+.sec {
+    margin: 0% 3% 5% 3%;
+    padding: 1%;
 }
