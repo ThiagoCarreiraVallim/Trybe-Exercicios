@@ -1,15 +1,15 @@
 let numberChoice = 7;
 let espaco = numberChoice;
 
-for (let linha = 0; linha < numberChoice; linha += 1){
-  let linha = '';
+for (let contador = 0; contador < numberChoice; contador += 1){
+  let linhas = '';
   for (let coluna = 1; coluna <= numberChoice; coluna += 1){
     if (espaco > coluna){
-      linha += ' ';
+      linhas += ' ';
     } else {
-      linha += '*'
+      linhas += '*'
     }
   }
   espaco -= 1;
-  console.log(linha);
+  console.log(linhas);
 }

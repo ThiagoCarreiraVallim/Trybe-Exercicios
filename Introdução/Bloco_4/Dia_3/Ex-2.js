@@ -1,4 +1,4 @@
-let numberChoice = 20;
+let numberChoice = 5;
 let linha = '';
 
 for (let asterisco = 1; asterisco <= numberChoice; asterisco += 1){

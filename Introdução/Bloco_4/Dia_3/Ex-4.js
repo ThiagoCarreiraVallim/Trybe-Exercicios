@@ -1,6 +1,7 @@
-let numberChoice = 9;
+let numberChoice = 17;
 let meio = Math.ceil(numberChoice / 2);
 let cont = meio;
+
 if (numberChoice % 2 == 1){
   for (let linha = 0; linha < cont; linha += 1){
     let linhas = '';
