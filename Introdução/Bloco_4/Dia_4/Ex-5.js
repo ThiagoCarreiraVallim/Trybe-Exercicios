@@ -1,14 +1,21 @@
-function repeat (arr){
-  let numero = 0, count = 0;
-  let maisRepetido = {
-    numero: 0,
-    repetido: 0,
-  };
-  for (let index in arr){
-    for (let num in arr){
-      if (arr[index] == arr[num]){
-        
+function maisRepetido (numeros){
+  let contRepetido = 0;
+  let contNumero = 0;
+  let indexNumeroRepetido = 0;
+  for (let index in numeros) {
+    let verificaNumero = numeros[index];
+    for (let index2 in numeros) {
+      if (verificaNumero === numeros[index2]) {
+        contNumero++;
       }
     }
+    if (contNumero > contRepetido) {
+      contRepetido = contNumero;
+      indexNumeroRepetido = index;
+    }
+    contNumero = 0;
   }
+  return numeros[indexNumeroRepetido];
 }
+
+console.log(maisRepetido([2, 3, 3, 5, 8, 2, 3]));
