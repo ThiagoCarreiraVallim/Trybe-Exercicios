@@ -6,7 +6,7 @@ function maisRepetido (numeros){
     let verificaNumero = numeros[index];
     for (let index2 in numeros) {
       if (verificaNumero === numeros[index2]) {
-        contNumero++;
+        contNumero += 1;
       }
     }
     if (contNumero > contRepetido) {
@@ -18,4 +18,4 @@ function maisRepetido (numeros){
   return numeros[indexNumeroRepetido];
 }
 
-console.log(maisRepetido([2, 3, 3, 5, 8, 2, 3]));
+console.log(maisRepetido([2, 41, 41, 5, 51, 5, 3]));
