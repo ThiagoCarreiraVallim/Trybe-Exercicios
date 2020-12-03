@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitulo"> Subtítulo </h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+    <h3 class="teste">Lorem, ipsum dolor sit </h3>
+    <h4 class="teste">Mudou veio</h4>
+
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById('page-title').innerText = 'Guia de Mochileiros da galaxia';
+      let outroP = document.getElementById('second-paragraph');
+      outroP.style.fontFamily = 'monospace';
+
+      document.getElementsByTagName('h4')[0].style.color = 'red';
+
+      let muda = document.getElementsByClassName('teste');
+      muda[0].style.backgroundColor = 'rgb(133, 245, 34)';
+
+
+    </script>
+  </body>
+</html>
