@@ -20,6 +20,7 @@
     </div>
   </div>
   <script>
+    // aula 1
     document.querySelector('#elementoOndeVoceEsta').parentNode.style.backgroundColor = 'black';
     document.querySelector('#elementoOndeVoceEsta').previousElementSibling.style.backgroundColor = 'red';
     document.querySelector('#elementoOndeVoceEsta').previousElementSibling.innerText = 'red';
@@ -29,11 +30,21 @@
     document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
     document.querySelector('#pai #terceiroFilho');
 
-
+    // aula 2
     let loc = document.getElementById('pai');
     let tes = document.createElement('p');
     loc.appendChild(tes);
 
+    let sibling = document.querySelector('#elementoOndeVoceEsta');
+    sibling.appendChild(document.createElement('h1'));
+
+    let filho = document.querySelector('#primeiroFilhoDoFilho');
+    let nome = document.createElement('h3');
+    filho.appendChild(nome);
+
+    document.getElementsByTagName(h3)[0];
+
+    
   </script>
 </body>
 </html>
