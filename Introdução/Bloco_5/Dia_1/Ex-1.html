@@ -55,15 +55,47 @@
   /*
  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
  */
-    function squareYellow(){
-      document.getElementsByClassName('main-content')
+    function squareYellow() {
+      let green = document.getElementsByClassName('main-content');
+      green[0].style.backgroundColor = 'rgb(76,164,109)';
     }
+    squareYellow();
  /*
  Crie uma função que mude a cor do quadrado vermelho para branco.
+*/
+    function redSquare () {
+      let red = document.getElementsByClassName('center-content');
+      red[0].style.backgroundColor = 'white';
+    }
+    redSquare();
+/*
  Crie uma função que corrija o texto da tag <h1>.
+*/
+    function rightTag () {
+      let title = document.getElementsByTagName('h1');
+      title[0].innerText = 'Exercício 5.1 - JavaScript';
+    }
+    rightTag();
+/*
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+  */
+    function upperP () {
+      let upper = document.getElementsByTagName('p');
+      for (let index = 0; index < upper.length; index += 1) {
+        upper[index].style.textTransform = 'uppercase';
+      }
+      return upper
+    }
+    upperP();
+  /*
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+    function showP (upper) {
+      for (let index = 0; index < upper.length; index += 1) {
+        console.log(upper[index]);
+      }
+    }
+    showP(upperP());
     </script>
   </body>
 </html>
