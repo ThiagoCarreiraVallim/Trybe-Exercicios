@@ -61,9 +61,9 @@
       /*Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
       */
       let bodi = document.querySelector('body');
-      let tagH1 = document.createElement('h1');
-      tagH1.innerText = 'Exercício 5.2 - JavaScript';
-      bodi.appendChild(tagH1);
+      let tagH1Criate = document.createElement('h1');
+      tagH1Criate.innerText = 'Exercício 5.2 - JavaScript';
+      bodi.appendChild(tagH1Criate);
       /*
 Adicione a tag div com a classe main-content como filho da tag body ;
 */
@@ -126,11 +126,37 @@ Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.*/
 
 /*Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
 Adicione a classe title na tag h1 criada;
+*/
+      let tagH1 = document.querySelector('body h1');
+      tagH1.className = 'title';
+/*
 Adicione a classe description nas 3 tags h3 criadas;
+*/
+      let tagH3 = document.querySelectorAll('.center-content h3');
+      for (let index = 0; index < tagH3.length; index += 1) {
+        tagH3[index].className = 'description';
+      }
+/*
 Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+*/
+      divMainContent.removeChild(divLeftContent);
+/*
 Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+*/
+      divRightContent.style.marginRight = 'auto';
+/*
 Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+*/
+      divCenterContent.style.backgroundColor = 'white';
+/*
 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.*/
+      let listContent = document.querySelector('ul');
+      let autoRemove = document.querySelectorAll('ul li');
+      for (let index = 8; index < 10; index += 1) {
+        let remove = autoRemove[index]
+        listContent.removeChild(remove);
+      }
+
     </script>
   </body>
 </html>
