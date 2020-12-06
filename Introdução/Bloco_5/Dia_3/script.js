@@ -52,7 +52,7 @@ function onClickHoliday() {
   if (holidayButton[0].style.backgroundColor === 'green') {
     for (let index = 0; index < holidayButton.length; index += 1) {
       holidayButton[index].style.backgroundColor = 'rgb(238,238,238)';
-      holidayButton[index].style.color = '#666';
+      holidayButton[index].style.color = '#777';
     }
   } else{
     for (let index = 0; index < holidayButton.length; index += 1) {
@@ -96,11 +96,10 @@ function changeFriday() {
 }
 
 function mouseOverZoomIn(event) {
-  event.target.style.transform = 'scale(1.6)'
+  event.target.style.transform = 'scale(2)'
   event.target.style.background = 'none';
   event.target.style.transition = '0.5s'
   event.target.style.cursor = 'pointer'
-  event.target.style.color = '#666'
 }
 
 function mouseOverZoomOut(event) {
@@ -112,7 +111,6 @@ function mouseOverZoomOut(event) {
 
 function mouseOutHoliday(event) {
   event.target.style.backgroundColor = 'green';
-  event.target.style.color = 'white';
 }
 
 function zoomList() {
@@ -145,21 +143,45 @@ function addColorTask(color) {
 function isSelected() {
   let taskSelected = document.querySelector('div.my-tasks div');
   let classTask = taskSelected.className;
-  if (classTask === 'task-selected') {
+  if (classTask === 'task selected') {
     taskSelected.className = 'task'
   } else if(classTask === 'task') {
-    taskSelected.className = 'task-selected';
+    taskSelected.className = 'task selected';
   }
 }
 
 function markColor() {
   let taskSelected = document.querySelector('div.my-tasks div');
-  console.log(taskSelected);
   taskSelected.addEventListener('click', isSelected);
 }
 
+function markDay(event) {
+  if (event.target.style.color === 'blue') {
+    event.target.style.color = '#777'
+  }else {
+    event.target.style.color = 'blue';
+  }
+}
 
+function colorizeDay() {
+  let days = document.querySelectorAll('.day');
+  for (let index = 0; index < days.length; index += 1) {
+    days[index].addEventListener('click', markDay);
+  }
+}
 
+function pressButton() {
+  let input = document.querySelector('#task-input');
+  let taskList = document.querySelector('.task-list');
+  let listInput = document.querySelector('li');
+  listInput.value = input.value;
+  taskList.appendChild(listInput)
+}
+
+function getCompromisse() {
+  let buttonInput = document.querySelector('#btn-add');
+  buttonInput.addEventListener('click', pressButton);
+}
 
 createDaysOfTheWeek();
 daysMonth();
@@ -171,3 +193,5 @@ zoomList();
 addTask('Cozinhar');
 addColorTask('blue');
 markColor();
+colorizeDay();
+getCompromisse();
