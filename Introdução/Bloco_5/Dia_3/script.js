@@ -173,14 +173,31 @@ function colorizeDay() {
 function pressButton() {
   let input = document.querySelector('#task-input');
   let taskList = document.querySelector('.task-list');
-  let listInput = document.querySelector('li');
-  listInput.value = input.value;
-  taskList.appendChild(listInput)
+  let listInput = document.createElement('li');
+  listInput.innerText = input.value;
+  if (input.value == '') {
+    alert('Erro ao adicionar um Compromisso. Ausencia de entrada de texto')
+  }else {
+    taskList.appendChild(listInput)
+  }
+}
+
+function pressEnter(event) {
+  let enter = event.which || event.keyCode;
+  let input = document.querySelector('#task-input');
+  let taskList = document.querySelector('.task-list');
+  let listInput = document.createElement('li');
+  listInput.innerText = input.value;
+  if (enter == 13){
+    taskList.appendChild(listInput)
+  }
 }
 
 function getCompromisse() {
   let buttonInput = document.querySelector('#btn-add');
+  let input = document.querySelector('#task-input');
   buttonInput.addEventListener('click', pressButton);
+  input.addEventListener('keyup', pressEnter);
 }
 
 createDaysOfTheWeek();
