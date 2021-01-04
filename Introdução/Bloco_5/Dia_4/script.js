@@ -32,15 +32,13 @@ function changeFontColor() {
 function changeFontSize() {
   bodyWay[0].style.fontSize = localStorage.getItem('fontSize')
   btnUpFont.addEventListener('click', function() {
-    let atual = comun + 1
-    comun = atual;
-    bodyWay[0].style.fontSize = `${atual}px`;
+    comun += 1;
+    bodyWay[0].style.fontSize = `${comun}px`;
     localStorage.setItem('fontSize', bodyWay[0].style.fontSize)
   })
   btnDownFont.addEventListener('click', function() {
-    let decre = comun - 1;
-    comun = decre;
-    bodyWay[0].style.fontSize = `${decre}px`;
+    comun -= 1;
+    bodyWay[0].style.fontSize = `${comun}px`;
     localStorage.setItem('fontSize', bodyWay[0].style.fontSize)
   })
 }
