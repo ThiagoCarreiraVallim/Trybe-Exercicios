@@ -1,0 +1,21 @@
+.textFamily {
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+}
+
+.textFamily:hover {
+  box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+#arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#times {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#monospace {
+  font-family: monospace;
+}
