@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <form action="" method="get" id="form">
+    <fieldset>
+      <h2>Dados Pessoais</h2>
+      <label for="input-name">Digite seu nome completo: <input alt="Nome Completo" type="text" name="nome" id="input-name" maxlength="40" required class="result"></label>
+      <label for="input-email">Digite seu email: <input alt="E-mail" type="text" name="email" id="input-email" maxlength="50" required class="result"></label>
+      <label for="input-cpf">Digite seu CPF: <input alt="CPF" type="text" name="CPF" id="input-cpf" maxlength="11" required class="result"></label>
+      <label for="input-address">Digite seu endereço: <input alt="Endereço" type="text" name="address" id="input-address" maxlength="200" required class="result"></label>
+      <select name="state" id="state" required class="selected">
+        <option value="">Selecione um estado</option>
+      </select>
+      <select name="city" id="city" required class="selected">
+        <option value="">Selecione uma cidade</option>
+      </select>
+      <div>
+        <p>Tipo da residência</p>
+        <label for="radioAp">Apartamento: <input type="radio" name="casa" id="radioAp" required class="radio"></label>
+        <label for="radioCs">Casa: <input type="radio" name="casa" id="radioCs" class="radio"></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <h2>Dados do ultimo emprego</h2>
+      <p>Resumo do currículo:</p>
+      <textarea alt="Resumo do currículo" name="resume" id="textResume" cols="30" rows="10" maxlength="1000" required></textarea>
+      <label for="inputCargo">Digite o seu cargo: <input alt="Cargo" type="text" name="cargo" id="inputCargo" maxlength="40" required class="result"></label>
+      <label for="inputDes">Descrição do cargo: <input alt="Descrição do cargo" type="text" name="descrição" id="inputDes" maxlength="500" required class="result"></label>
+      <label for="inputData">Data de incio: <input alt="Data de inicio" type="date" name="dataInicial" id="inputData" required class="result"></label>
+      <label for="atual">Emprego atual <input type="checkbox" name="atual" id="atual" class="result"></label>
+      <label for="inputDataF">Data de termino: <input type="date" name="dataFinal" id="inputDataF" class="result"></label>
+    </fieldset>
+    <button type="submit" id="buttonSubmit">Finalizar cadastro</button>
+    <button id="del">Apagar formulário</button>
+  </form>
+  <fieldset>
+    <div id="respostas">
+      <h3>Seus Dados</h3>
+    </div>
+  </fieldset>
+  <script src="script.js"></script>
+</body>
+</html>
