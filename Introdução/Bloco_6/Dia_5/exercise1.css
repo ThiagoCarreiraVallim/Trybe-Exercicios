@@ -1,0 +1,58 @@
+body {
+  font-size: 16px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.7em;
+}
+h2 {
+  font-size: 1.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+figure {
+  margin: 15px auto;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1299px) {
+  body {
+    background-color: lightgray;
+    font-size: 18px;
+  }
+
+  figure {
+    width: 45%;
+  }
+
+  .images {
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: lightblue;
+    font-size: 20px;
+  }
+
+  .main {
+    width: 80%;
+    margin: auto;
+  }
+
+  figure {
+    width: 45%;
+  }
+
+  .images {
+    flex-flow: row wrap;
+  }
+}
