@@ -13,4 +13,9 @@ const longestWord = phrase => {
 console.log(longestWord("Antônio foi no banheiro e não sabemos o que aconteceu")); // retorna 'aconteceu'
 
 // Ex.4
-
+let str = 'Trybers x aqui!'
+const switchX = word => str.replace('x', word);
+let arr = ['HTML', 'CSS', 'JS', 'GIT', 'Soft Skills'];
+let texto = switchX('benabe');
+console.log(arr.forEach(palavra => texto += palavra));
+console.log(texto);
