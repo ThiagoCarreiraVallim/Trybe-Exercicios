@@ -13,5 +13,5 @@ const student2 = {
   Git: 'Bom', // chave adicionada
 };
 
-const skills = obj => Object.keys(obj).forEach(skills => console.log(`${skills} ${obj[skills]}`));
-skills(student2);
+const skills = obj => Object.keys(obj).forEach(skills => console.log(`${skills} nível:${obj[skills]}`));
+skills(student1);

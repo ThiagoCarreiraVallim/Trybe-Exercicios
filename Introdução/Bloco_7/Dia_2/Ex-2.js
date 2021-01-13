@@ -37,8 +37,24 @@ const lessons = function () {
   return allLessons
 }
 
-console.log(changeObj(lesson2, 'turno', 'manhã'));
-console.log(countKeys(lesson2));
-console.log(lengthObj(lesson1));
-console.log(valuesObj(lesson3));
-console.log(lessons());
+const allLessons = lessons();
+
+const somaStudents = function (obj) {
+  const lessons = Object.keys(obj);
+  let students = 0;
+  lessons.forEach(lesson => students += obj[lesson].numeroEstudantes);
+  return students;
+}
+
+const findKey = (obj, index) => Object.values(obj)[index];
+
+const verifyObj = (obj, key, value) => obj[key] === value ? true : false;
+
+// console.log(changeObj(lesson2, 'turno', 'manhã'));
+// console.log(countKeys(lesson2));
+// console.log(lengthObj(lesson1));
+// console.log(valuesObj(lesson3));
+// console.log(lessons());
+//console.log(somaStudents(allLessons));
+//console.log(findKey(lesson3, 1));
+//console.log(verifyObj(lesson1, 'turno', 'paulo'));
