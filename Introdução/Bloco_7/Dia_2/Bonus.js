@@ -18,14 +18,9 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const lessons = function () {
-  const arrObj2 = [lesson1, lesson2, lesson3];
-  const arrObj = ['lesson1', 'lesson2', 'lesson3'];
-  const allLessons = {};
-  arrObj.forEach((value, index) => allLessons[value] = Object.assign({}, arrObj2[index]));
-  return allLessons
-}
+const lessons = () => Object.assign({}, { lesson1, lesson2, lesson3 });
 const allLessons = lessons();
+console.log(lessons());
 
 const mathStudents = obj => obj.lesson1.numeroEstudantes;
 //console.log(mathStudents(allLessons));
