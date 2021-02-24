@@ -24,12 +24,13 @@ function createStates() {
   .then(states => {
     let ordered = organizeArray(states);
     ordered.map((state) => {
+      console.log(state);
       const option = document.createElement('option');
       option.value = state[1];
       option.innerText = state[0];
       select.appendChild(option);
-    })
-  })
+    });
+  });
 }
 
 function createCities() {
